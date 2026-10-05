@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">PawCare</string>
+    <string-array name="animal_types">
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Bird</item>
+        <item>Rabbit</item>
+        <item>Fish</item>
+        <item>Hamster</item>
+        <item>Reptile</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="expense_categories">
+        <item>Food</item>
+        <item>Medication</item>
+        <item>Vet</item>
+        <item>Grooming</item>
+        <item>Toys</item>
+        <item>Supplies</item>
+        <item>Other</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="SMS care handoff" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Select pet" style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+                <AutoCompleteTextView android:id="@+id/inputPet" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchIncludeChecklist" android:layout_width="match_parent" android:layout_height="wrap_content" android:checked="true" android:text="Include today's checklist" />
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Recipient phone number" app:errorEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/inputPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Message preview" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/preview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:padding="12dp" android:background="?attr/colorSecondaryContainer" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSend" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="16dp" android:text="Open SMS app" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

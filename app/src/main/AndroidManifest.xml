@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".PawCareApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_paw"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_paw"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PawCare">
+
+        <activity
+            android:name=".ui.auth.WelcomeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PawCare">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.auth.LoginActivity" android:exported="false" />
+        <activity android:name=".ui.auth.RegisterActivity" android:exported="false" />
+        <activity android:name=".ui.main.MainActivity" android:exported="false" />
+        <activity android:name=".ui.pet.PetEditActivity" android:exported="false" />
+        <activity android:name=".ui.pet.PetDetailActivity" android:exported="false" />
+        <activity android:name=".ui.routine.RoutineEditActivity" android:exported="false" />
+        <activity android:name=".ui.task.TaskEditActivity" android:exported="false" />
+        <activity android:name=".ui.sms.SmsDelegateActivity" android:exported="false" />
+        <activity android:name=".ui.expense.ExpensesActivity" android:exported="false" />
+        <activity android:name=".ui.appointment.AppointmentsActivity" android:exported="false" />
+
+        <receiver
+            android:name=".notify.ReminderReceiver"
+            android:exported="false" />
+        <receiver
+            android:name=".notify.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,13 @@
+<resources>
+    <color name="md_theme_primary">#006C51</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#83F8D0</color>
+    <color name="md_theme_onPrimaryContainer">#002117</color>
+    <color name="md_theme_secondary">#8B4F24</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#FFDCC6</color>
+    <color name="md_theme_onSecondaryContainer">#311300</color>
+    <color name="md_theme_surface">#F5FBF6</color>
+    <color name="md_theme_onSurface">#171D1A</color>
+    <color name="md_theme_error">#BA1A1A</color>
+</resources>

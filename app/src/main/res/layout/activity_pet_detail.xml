@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="Pet" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/heroPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:contentDescription="Pet photo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_paw" />
+
+            <TextView
+                android:id="@+id/petName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+
+            <TextView
+                android:id="@+id/petMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/facts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Photos" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/photoStrip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+            </HorizontalScrollView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAddPhoto" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add another photo" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Allergies" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/allergies" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Dietary preferences" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/diet" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Favourite toys" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/toys" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Medical notes" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/medical" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Vaccination history" android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+            <TextView android:id="@+id/vaccines" android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnEdit" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Edit details" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAddRoutine" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add care routine" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnExpenses" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expenses for this pet" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDelete" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Delete pet" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
